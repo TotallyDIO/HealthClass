@@ -296,7 +296,7 @@ System.out.flush();
             System.out.print("\033[H\033[2J");
             System.out.flush();
          };
-    System.out.println("Thanks For Playing !\n\n\n Score:" correctanswers "/" totalquestions "\n\nHope You Had Fun!");
+    System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!");
         
  }
 }
