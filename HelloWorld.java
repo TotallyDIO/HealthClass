@@ -173,7 +173,7 @@ System.out.flush();
      };
 
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q7: You receive a message from a stranger on" + SocialMedia[index] + "asking for your phone number, what do you do? \n \n \n 1. Give them your phone number\n 2. Ignore the message\n 3. Respond to the message and ask why they want your phone number");
+        System.out.println("Q7: You receive a message from a stranger on " + SocialMedia[index] + " asking for your phone number, what do you do? \n \n \n 1. Give them your phone number\n 2. Ignore the message\n 3. Respond to the message and ask why they want your phone number");
         int answer7 = input.nextInt();
 
         //checks answer and prints responses
@@ -273,7 +273,7 @@ System.out.flush();
          };
 
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q11: You receive a message from a stranger on" + SocialMedia[index] + "asking for your address, what do you do? \n \n \n 1. Give them your address\n 2. Ignore the message\n 3. Respond to the message and ask why they want your address");
+        System.out.println("Q11: You receive a message from a stranger on " + SocialMedia[index] + " asking for your address, what do you do? \n \n \n 1. Give them your address\n 2. Ignore the message\n 3. Respond to the message and ask why they want your address");
         int answer11 = input.nextInt();
 
         //checks answer and prints responses
