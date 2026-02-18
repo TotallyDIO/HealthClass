@@ -296,8 +296,7 @@ System.out.flush();
             System.out.print("\033[H\033[2J");
             System.out.flush();
          };
-    System.out.println("Questions Answered: " + questionsanswered + "/" + " Questions Left: " + totalquestions + "\n\n\n");
-    System.out.println("Q12: You're smoking in the bathroom and decide to post a picture on " + SocialMedia[index]);
+    System.out.println("Thanks For Playing !\n\n\n Score:" correctanswers "/" totalquestions "\n\nHope You Had Fun!");
         
  }
 }
