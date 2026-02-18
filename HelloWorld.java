@@ -122,7 +122,7 @@ System.out.flush();
     }
         //question 5
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q5: You and your friend go to a party, you get drunk, your friend starts taking pictures of you and posts them on social media, what do you do? \n \n \n 1. Ask your friend to take down the pictures\n 2. Ignore the pictures\n 3. Post more pictures of yourself to distract from the ones your friend posted");
+        System.out.println("Q5: You and your friend go to a party, you get drunk, your friend starts taking pictures of you and posts them on " + SocialMedia[index] + ", what do you do? \n \n \n 1. Ask your friend to take down the pictures\n 2. Ignore the pictures\n 3. Post more pictures of yourself to distract from the ones your friend posted");
         int answer5 = input.nextInt();
 
         //checks answer and prints responses
@@ -173,7 +173,7 @@ System.out.flush();
      };
 
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q7: You receive a message from a stranger on social media asking for your phone number, what do you do? \n \n \n 1. Give them your phone number\n 2. Ignore the message\n 3. Respond to the message and ask why they want your phone number");
+        System.out.println("Q7: You receive a message from a stranger on" + SocialMedia[index] + "asking for your phone number, what do you do? \n \n \n 1. Give them your phone number\n 2. Ignore the message\n 3. Respond to the message and ask why they want your phone number");
         int answer7 = input.nextInt();
 
         //checks answer and prints responses
@@ -198,7 +198,7 @@ System.out.flush();
          };
 
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q8: You receive a message from a stranger on social media asking for your SSN (social Security number), what do you do? \n \n \n 1. Give them your SSN\n 2. Ignore the message\n 3. Respond to the message and ask why they want your SSN");
+        System.out.println("Q8: You receive a message from a stranger on " + SocialMedia[index] + " asking for your SSN (social Security number), what do you do? \n \n \n 1. Give them your SSN\n 2. Ignore the message\n 3. Respond to the message and ask why they want your SSN");
         int answer8 = input.nextInt();
 
         //checks answer and prints responses
@@ -248,7 +248,7 @@ System.out.flush();
          };
 
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q10: You receive a message from a stranger on social media asking for pictures of yourself and it makes you uncomfortable, what do you do? \n \n \n 1. Give them your pictures\n 2. Ignore the message\n 3. Respond to the message and ask why they want your pictures");
+        System.out.println("Q10: You receive a message from a stranger on " + SocialMedia[index] +" asking for pictures of yourself and it makes you uncomfortable, what do you do? \n \n \n 1. Give them your pictures\n 2. Ignore the message\n 3. Respond to the message and ask why they want your pictures");
         int answer10 = input.nextInt();
 
         //checks answer and prints responses
@@ -273,7 +273,7 @@ System.out.flush();
          };
 
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Q11: You receive a message from a stranger on social media asking for your address, what do you do? \n \n \n 1. Give them your address\n 2. Ignore the message\n 3. Respond to the message and ask why they want your address");
+        System.out.println("Q11: You receive a message from a stranger on" + SocialMedia[index] + "asking for your address, what do you do? \n \n \n 1. Give them your address\n 2. Ignore the message\n 3. Respond to the message and ask why they want your address");
         int answer11 = input.nextInt();
 
         //checks answer and prints responses
@@ -297,7 +297,7 @@ System.out.flush();
             System.out.flush();
          };
     System.out.println("Questions Answered: " + questionsanswered + "/" + " Questions Left: " + totalquestions + "\n\n\n");
-    System.out.println("Q12: You're smoking in the bathroom and decide to post a picture on ");
+    System.out.println("Q12: You're smoking in the bathroom and decide to post a picture on " + SocialMedia[index]);
         
  }
 }
