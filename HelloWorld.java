@@ -1,5 +1,6 @@
  import java.util.Scanner;  // Import the Scanner class
  import java.util.Random; //randomness
+ import java.io.PrintWriter;
  public class HelloWorld {
     static int questionsanswered = 0;
     static int totalquestions = 11;
@@ -8,7 +9,8 @@
     public static void main(String[] args) {
         final String[] SocialMedia = {"Instagram", "Youtube", "TikTok", "Pintrest", "facebook", "Twitter/X", "Snapchat"};
         Scanner input = new Scanner(System.in);  // Create a Scanner object
-        Random random = new Random();
+        Random random = new Random(); //randomness
+        PrintWriter writer = new PrintWriter("HighScores.txt", "UTF8-8");
         int index =  random.nextInt(SocialMedia.length);
         //clears console for cleanliness
         System.out.print("\033[H\033[2J");
