@@ -1,20 +1,23 @@
  import java.util.Scanner;  // Import the Scanner class
+ import java.util.Random; //randomness
  public class HelloWorld {
     static int questionsanswered = 0;
-    static int totalquestions = 20;
-    static int question1 = 2;
+    static int totalquestions = 12;
     static int correctanswers = 0;
     static int wronganswers = 0;
-     public static void main(String[] args) {
+    public static void main(String[] args) {
+        final String[] SocialMedia = {"Instagram", "Youtube", "TikTok", "Pintrest", "facebook", "Twitter/X", "Snapchat"};
         Scanner input = new Scanner(System.in);  // Create a Scanner object
+        Random random = new Random();
+        int index =  random.nextInt(SocialMedia.length);
         //clears console for cleanliness
         System.out.print("\033[H\033[2J");
         System.out.flush();
         //introduction and instructions
-        System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n Welcome to the Health Class Quiz! \n \n \n Please answer the following questions to the best of your ability. \n \n \n Let's get started! \n \n \n!");
+        System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n Welcome to the Health Class Quiz! \n \n \n Please answer the following questions to the best of your ability. \n \n \n Let's get started! \n ------------------------------------------------------\n \n");
 
         //question 1
-        System.out.println("Q1: someone messages you on instagram, saying that they need $200 to pay for their car and they will pay you back, what do you do? \n \n \n 1. Send them the money \n 2. Block them\n 3. Play around with them by baiting them");
+        System.out.println("Q1: someone messages you on, saying that they need $200 to pay for their car and they will pay you back, what do you do? \n \n \n 1. Send them the money \n 2. Block them\n 3. Play around with them by baiting them");
         
         int answer1 = input.nextInt();
         // prints the answer responses
@@ -293,10 +296,8 @@ System.out.flush();
             System.out.print("\033[H\033[2J");
             System.out.flush();
          };
-
-        System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n ");
-        System.out.println("Your final score is: " + correctanswers + "/" + totalquestions);
-
+    System.out.println("Questions Answered: " + questionsanswered + "/" + " Questions Left: " + totalquestions + "\n\n\n");
+    System.out.println("Q12: You're smoking in the bathroom and decide to post a picture on ");
         
  }
 }
