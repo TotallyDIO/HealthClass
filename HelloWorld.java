@@ -2,7 +2,7 @@
  import java.util.Random; //randomness
  public class HelloWorld {
     static int questionsanswered = 0;
-    static int totalquestions = 12;
+    static int totalquestions = 11;
     static int correctanswers = 0;
     static int wronganswers = 0;
     public static void main(String[] args) {
