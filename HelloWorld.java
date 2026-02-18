@@ -17,7 +17,7 @@
         System.out.println("Questions Answered: " + questionsanswered + "/" + totalquestions + "\n \n \n Welcome to the Health Class Quiz! \n \n \n Please answer the following questions to the best of your ability. \n \n \n Let's get started! \n ------------------------------------------------------\n \n");
 
         //question 1
-        System.out.println("Q1: someone messages you on, saying that they need $200 to pay for their car and they will pay you back, what do you do? \n \n \n 1. Send them the money \n 2. Block them\n 3. Play around with them by baiting them");
+        System.out.println("Q1: someone messages you on " + SocialMedia[index] + ", saying that they need $200 to pay for their car and they will pay you back, what do you do? \n \n \n 1. Send them the money \n 2. Block them\n 3. Play around with them by baiting them");
         
         int answer1 = input.nextInt();
         // prints the answer responses
