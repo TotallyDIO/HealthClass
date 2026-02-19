@@ -19,7 +19,6 @@ import java.nio.charset.StandardCharsets;
         Random random = new Random(); //randomness
         int index =  random.nextInt(SocialMedia.length); 
         Path path = Paths.get("HighScores.log");
-        assertFalse(Files.exists(path));
         String data = "LeaderBoard";
         try {
             // Creates the file and writes the bytes to it. Overwrites if it exists.
