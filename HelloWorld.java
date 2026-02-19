@@ -3,7 +3,7 @@ import java.util.Random; //randomness
 import java.io.File;
 import java.io.IOException; 
 import java.io.PrintWriter; //write the words to the file
-import java.io.IOException;
+import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -19,6 +19,17 @@ import java.nio.charset.StandardCharsets;
         Random random = new Random(); //randomness
         int index =  random.nextInt(SocialMedia.length); 
         Path path = Paths.get("HighScores.log");
+
+        try {
+      FileWriter Writer = new FileWriter("HighScores.log");
+      Writer.write("Files in Java might be tricky, but it is fun enough!");
+      System.out.println("Successfully wrote to the file.");
+        Writer.close();  // must close manually
+
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
 /*
         try {
             // Creates the file and writes the bytes to it. Overwrites if it exists.
@@ -319,5 +330,12 @@ System.out.flush();
          };
     System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!\n\n\nEnter Your Name to be put on the leaderboard:");
     String name = input.nextLine();
- }
+    try (FileWriter ending = new FileWriter("filename.txt", true)) {
+      ending.write("\n" + name);
+      System.out.println("Successfully appended to the file.");
+    } catch (IOException e) {
+      System.out.println(name);
+      e.printStackTrace();
+    }
+    }
 }
