@@ -1,6 +1,6 @@
  import java.util.Scanner;  // Import the Scanner class
  import java.util.Random; //randomness
- import java.io.file;
+ import java.io.File;
  import java.io.IOException; 
  import java.io.PrintWriter; //write the words to the file
  public class HelloWorld {
@@ -12,7 +12,7 @@
         final String[] SocialMedia = {"Instagram", "Youtube", "TikTok", "Pintrest", "facebook", "Twitter/X", "Snapchat"};
         Scanner input = new Scanner(System.in);  // Create a Scanner object
         Random random = new Random(); //randomness
-        File highScore = new File("HighScores.txt")
+        File highScore = new File("HighScores.txt");
         int index =  random.nextInt(SocialMedia.length);
         //clears console for cleanliness
         System.out.print("\033[H\033[2J");
