@@ -19,7 +19,7 @@ import java.nio.charset.StandardCharsets;
         Random random = new Random(); //randomness
         int index =  random.nextInt(SocialMedia.length); 
         Path path = Paths.get("HighScores.log");
-        String data = "LeaderBoard";
+/*
         try {
             // Creates the file and writes the bytes to it. Overwrites if it exists.
             Files.write(path, data.getBytes(StandardCharsets.UTF_8));
@@ -28,8 +28,7 @@ import java.nio.charset.StandardCharsets;
             System.err.println("An error occurred: " + e.getMessage());
             e.printStackTrace();
         }
-
-
+*/
         //clears console for cleanliness
         System.out.print("\033[H\033[2J");
         System.out.flush();
@@ -318,7 +317,7 @@ System.out.flush();
             System.out.print("\033[H\033[2J");
             System.out.flush();
          };
-    System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!\n\n\n" + answer1 + answer2 + answer3 + answer4 + answer5);
-        
+    System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!\n\n\nEnter Your Name to be put on the leaderboard:");
+    String name = input.nextLine();
  }
 }
