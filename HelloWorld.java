@@ -1,8 +1,13 @@
- import java.util.Scanner;  // Import the Scanner class
- import java.util.Random; //randomness
- import java.io.File;
- import java.io.IOException; 
- import java.io.PrintWriter; //write the words to the file
+import java.util.Scanner;  // Import the Scanner class
+import java.util.Random; //randomness
+import java.io.File;
+import java.io.IOException; 
+import java.io.PrintWriter; //write the words to the file
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
  public class HelloWorld {
     static int questionsanswered = 0;
     static int totalquestions = 11;
@@ -12,8 +17,20 @@
         final String[] SocialMedia = {"Instagram", "Youtube", "TikTok", "Pintrest", "facebook", "Twitter/X", "Snapchat"};
         Scanner input = new Scanner(System.in);  // Create a Scanner object
         Random random = new Random(); //randomness
-        File highScore = new File("HighScores.txt");
+        File file = new File("HighScores.log");
         int index =  random.nextInt(SocialMedia.length);
+        Path path = Paths.get("HighScores.log");
+        String data = "LeaderBoard";
+        try {
+            // Creates the file and writes the bytes to it. Overwrites if it exists.
+            Files.write(path, data.getBytes(StandardCharsets.UTF_8));
+            System.out.println("File created successfully at: " + path.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+
         //clears console for cleanliness
         System.out.print("\033[H\033[2J");
         System.out.flush();
@@ -302,7 +319,7 @@ System.out.flush();
             System.out.print("\033[H\033[2J");
             System.out.flush();
          };
-    System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!");
+    System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!\n\n\n" + answer1 + answer2 + answer3 + answer4 + answer5);
         
  }
 }
