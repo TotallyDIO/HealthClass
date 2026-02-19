@@ -1,6 +1,8 @@
  import java.util.Scanner;  // Import the Scanner class
  import java.util.Random; //randomness
- import java.io.PrintWriter;
+ import java.io.file;
+ import java.io.IOException; 
+ import java.io.PrintWriter; //write the words to the file
  public class HelloWorld {
     static int questionsanswered = 0;
     static int totalquestions = 11;
@@ -10,7 +12,7 @@
         final String[] SocialMedia = {"Instagram", "Youtube", "TikTok", "Pintrest", "facebook", "Twitter/X", "Snapchat"};
         Scanner input = new Scanner(System.in);  // Create a Scanner object
         Random random = new Random(); //randomness
-        PrintWriter writer = new PrintWriter("HighScores.txt", "UTF8-8");
+        File highScore = new File("HighScores.txt")
         int index =  random.nextInt(SocialMedia.length);
         //clears console for cleanliness
         System.out.print("\033[H\033[2J");
@@ -293,6 +295,8 @@ System.out.flush();
             System.out.println("Responding to the message and asking why they want your address may still allow the stranger to contact you and potentially put you at risk.\n \n \n  Press enter to continue.");
         };
 
+
+//ending put at end!
         input.nextLine();
         if (input.nextLine().isEmpty()) {
             System.out.print("\033[H\033[2J");
