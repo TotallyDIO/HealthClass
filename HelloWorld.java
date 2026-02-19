@@ -17,9 +17,9 @@ import java.nio.charset.StandardCharsets;
         final String[] SocialMedia = {"Instagram", "Youtube", "TikTok", "Pintrest", "facebook", "Twitter/X", "Snapchat"};
         Scanner input = new Scanner(System.in);  // Create a Scanner object
         Random random = new Random(); //randomness
-        File file = new File("HighScores.log");
-        int index =  random.nextInt(SocialMedia.length);
+        int index =  random.nextInt(SocialMedia.length); 
         Path path = Paths.get("HighScores.log");
+        assertFalse(Files.exists(path));
         String data = "LeaderBoard";
         try {
             // Creates the file and writes the bytes to it. Overwrites if it exists.
