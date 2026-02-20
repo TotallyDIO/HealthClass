@@ -18,10 +18,10 @@ import java.nio.charset.StandardCharsets;
         Scanner input = new Scanner(System.in);  // Create a Scanner object
         Random random = new Random(); //randomness
         int index =  random.nextInt(SocialMedia.length); 
-        Path path = Paths.get("HighScores.log");
+        Path path = Paths.get("Scores.txt");
 
         try {
-      FileWriter Writer = new FileWriter("HighScores.log");
+      FileWriter Writer = new FileWriter("Scores.txt");
       Writer.write("Files in Java might be tricky, but it is fun enough!");
       System.out.println("Successfully wrote to the file.");
         Writer.close();  // must close manually
@@ -330,8 +330,8 @@ System.out.flush();
          };
     System.out.println("Thanks For Playing !\n\n\n Score:" + correctanswers + "/" + totalquestions + "\n\nHope You Had Fun!\n\n\nEnter Your Name to be put on the leaderboard:");
     String name = input.nextLine();
-    try (FileWriter ending = new FileWriter("filename.txt", true)) {
-      ending.write("\n" + name);
+    try (FileWriter ending = new FileWriter("Scores.txt", true)) {
+      ending.write("\n" + name + " Score: " + correctanswers + "/" + totalquestions + " History: " + answer1 + answer2 + answer3 + answer4 + answer5 + answer6 + answer7 + answer8 +answer9 + answer10 + answer11);
       System.out.println("Successfully appended to the file.");
     } catch (IOException e) {
       System.out.println(name);
