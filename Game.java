@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.charset.StandardCharsets;
- public class HelloWorld {
+ public class Game {
     static int questionsanswered = 0;
     static int totalquestions = 11;
     static int correctanswers = 0;
