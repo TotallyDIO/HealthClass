@@ -15,7 +15,10 @@ public class ADS{
         String a = scanner.nextLine(); // Waits for user to press Enter
         if (a.isEmpty()) {
             System.out.println("Starting quiz...");
-            System.out.println("\033[H\033[2J"); // Clears the console
+        System.out.print("\033[H\033[2J");//clears console for cleanliness
+        System.out.flush();
         }
+        System.out.println("Question 1: What is the legal drinking age in most countries?");
+
     }
 }
