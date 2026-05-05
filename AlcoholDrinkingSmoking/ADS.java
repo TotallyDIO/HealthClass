@@ -511,5 +511,22 @@ public class ADS{
             System.out.println("Incorrect. Avoidance is best.\n\nPress enter to continue.");
         }
 
+
+//ending put at end!
+        scanner.nextLine();
+        if (scanner.nextLine().isEmpty()) {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+         };
+    System.out.println("Thanks For Playing !\n\n\n Score:" + correctAnswers + "/" + totalQuestions + "\n\nHope You Had Fun!\n\n\nEnter Your Name to be put on the leaderboard:");
+    String name = scanner.nextLine();
+    try (FileWriter ending = new FileWriter("Scores.txt", true)) {
+      ending.write("\n" + name + " Score: " + correctAnswers + "/" + totalQuestions + " History: " + answer1 + answer2 + answer3 + answer4 + answer5 + answer6 + answer7 + answer8 +answer9 + answer10 + answer11 + answer12 + answer13 + answer14 + answer15 + answer16 + answer17 + answer18 + answer19 + answer20 + answer21 + answer22 + answer23 + answer24 + answer25 + answer26 + answer27 + answer28 + answer29 + answer30 + answer31 + answer32 + answer33 + answer34 + answer35 + answer36 + answer37 +(answer38) +(answer39) +(answer40));
+      System.out.println("Successfully appended to the file.");
+    } catch (IOException e) {
+      System.out.println(name);
+      e.printStackTrace();
+    }
+
     }
 }
