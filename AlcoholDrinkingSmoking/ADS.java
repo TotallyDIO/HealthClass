@@ -22,7 +22,7 @@ public class ADS{
 
         try {
             FileWriter Writer = new FileWriter("Scores.txt");
-            Writer.write("Files in Java might be tricky, but it is fun enough!");
+            Writer.write("Alcohol, Drinking, and Smoking Quiz Scores:\n");
             System.out.println("Successfully wrote to the file.");
             Writer.close();  // must close manually
 
