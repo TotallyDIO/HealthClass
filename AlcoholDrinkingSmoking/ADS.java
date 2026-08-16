@@ -1,11 +1,6 @@
 import java.util.Scanner;  // Import the Scanner class
-import java.io.File;
-import java.io.IOException; 
-import java.io.PrintWriter; //write the words to the file
-import java.io.FileWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.*;
+import java.nio.file.*;
 import java.nio.charset.StandardCharsets;
 
 public class ADS{
@@ -43,12 +38,18 @@ public class ADS{
         System.out.flush();
         }
         // Q1
-        System.out.println("Q1: What is a short-term effect of alcohol use?\n\n1. Improved memory\n2. Slurred speech\n3. Stronger lungs");
+        System.out.println("Q1: What is a short-term effect of alcohol use?\n\n1. Improved memory\n2. Slurred speech\n3. Stronger lungs\n\n");
         int answer1 = scanner.nextInt();
         if (answer1 == 2) {
             questionsAnswered++; 
             correctAnswers++;
             System.out.println("Correct! Alcohol can cause slurred speech.\n\nPress enter to continue.");
+            String b = scanner.nextLine(); // Waits for user to press Enter
+            if (b.isEmpty()) {
+                System.out.println("Starting quiz...");
+                System.out.print("\033[H\033[2J");//clears console for cleanliness
+                System.out.flush();
+            }
         } else {
             questionsAnswered++; 
             incorrectAnswers++;
@@ -56,7 +57,7 @@ public class ADS{
         }
 
         // Q2
-        System.out.println("Q2: Which of the following is a risk of smoking tobacco?\n\n1. Lung cancer\n2. Better eyesight\n3. Stronger heart");
+        System.out.println("Q2: Which of the following is a risk of smoking tobacco?\n\n1. Lung cancer\n2. Better eyesight\n3. Stronger heart\n\n");
         int answer2 = scanner.nextInt();
         if (answer2 == 1) {
             questionsAnswered++; 
@@ -69,7 +70,7 @@ public class ADS{
         }
 
         // Q3
-        System.out.println("Q3: What should you do if pressured to try drugs?\n\n1. Say no and leave\n2. Try once\n3. Ignore risks");
+        System.out.println("Q3: What should you do if pressured to try drugs?\n\n1. Say no and leave\n2. Try once\n3. Ignore risks\n\n");
         int answer3 = scanner.nextInt();
         if (answer3 == 1) {
             questionsAnswered++; 
@@ -82,7 +83,7 @@ public class ADS{
         }
 
         // Q4
-        System.out.println("Q4: What is nicotine?\n\n1. Vitamin\n2. Addictive chemical\n3. Protein");
+        System.out.println("Q4: What is nicotine?\n\n1. Vitamin\n2. Addictive chemical\n3. Protein\n\n");
         int answer4 = scanner.nextInt();
         if (answer4 == 2) {
             questionsAnswered++; 
@@ -95,7 +96,7 @@ public class ADS{
         }
 
         // Q5
-        System.out.println("Q5: Drinking too much quickly is called?\n\n1. Hydration\n2. Binge drinking\n3. Detox");
+        System.out.println("Q5: Drinking too much quickly is called?\n\n1. Hydration\n2. Binge drinking\n3. Detox\n\n");
         int answer5 = scanner.nextInt();
         if (answer5 == 2) {
             questionsAnswered++;   
@@ -108,7 +109,7 @@ public class ADS{
         }
 
         // Q6
-        System.out.println("Q6: Which organ does alcohol mainly affect?\n\n1. Liver\n2. Skin\n3. Bones");
+        System.out.println("Q6: Which organ does alcohol mainly affect?\n\n1. Liver\n2. Skin\n3. Bones\n\n");
         int answer6 = scanner.nextInt();
         if (answer6 == 1) {
             questionsAnswered++; 
@@ -121,7 +122,7 @@ public class ADS{
         }
 
         // Q7
-        System.out.println("Q7: Secondhand smoke is?\n\n1. Safe\n2. Smoke from others\n3. Clean air");
+        System.out.println("Q7: Secondhand smoke is?\n\n1. Safe\n2. Smoke from others\n3. Clean air\n\n");
         int answer7 = scanner.nextInt();
         if (answer7 == 2) {
             questionsAnswered++; 
@@ -133,7 +134,7 @@ public class ADS{
         }
 
         // Q8
-        System.out.println("Q8: Which is a stimulant?\n\n1. Cocaine\n2. Alcohol\n3. Heroin");
+        System.out.println("Q8: Which is a stimulant?\n\n1. Cocaine\n2. Alcohol\n3. Heroin\n\n");
         int answer8 = scanner.nextInt();
         if (answer8 == 1) {
             questionsAnswered++; correctAnswers++;
