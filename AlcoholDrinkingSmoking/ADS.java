@@ -1,7 +1,6 @@
 import java.util.Scanner;  // Import the Scanner class
 import java.io.*;
 import java.nio.file.*;
-import java.nio.charset.StandardCharsets;
 
 public class ADS{
     static int totalQuestions = 40;
@@ -518,7 +517,7 @@ public class ADS{
         if (scanner.nextLine().isEmpty()) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
-         };
+        };
     System.out.println("Thanks For Playing !\n\n\n Score:" + correctAnswers + "/" + totalQuestions + "\n\nHope You Had Fun!\n\n\nEnter Your Name to be put on the leaderboard:");
     String name = scanner.nextLine();
     try (FileWriter ending = new FileWriter("Scores.txt", true)) {
@@ -526,7 +525,7 @@ public class ADS{
       System.out.println("Successfully appended to the file.");
     } catch (IOException e) {
       System.out.println(name);
-      e.printStackTrace();
+      System.err.println("Error writing score: " + e.getMessage());
     }
 
     }
